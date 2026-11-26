@@ -44,7 +44,7 @@ jobs:
             await octokit.rest.git.createRef({ owner, repo, ref: `refs/tags/${version}`, sha });
           }
 
-          const middle = version.replace(/\.[0-9]+/, "");
+          const middle = version.replace(/\.[0-9]+$/, "");
           try {
             await octokit.rest.git.updateRef({ owner, repo, ref: `tags/${middle}`, sha });
           } catch (e) {
