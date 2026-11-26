@@ -1,0 +1,33 @@
+name: Find supported Pythons
+description: Find Python versions that are still supported, i.e., not EOL.
+author: BiocPy
+
+branding:
+  icon: info
+  color: blue
+
+inputs:
+  which:
+    description:
+      Which supported versions to obtain.
+      This can be `latest` (default), `oldest` or `all`.
+    required: false
+    default: 'latest'
+  date:
+    description:
+      The date to use for determining supported versions.
+      This should follow a `YYYY-MM-DD` format.
+      Defaults to an empty string, which will use the current date.
+    required: false
+    default: ''
+
+outputs:
+  version:
+    description:
+      The requested version.
+      For `latest` or `oldest`, this is a single string specifying the version.
+      For `all`, it is a string containing a JSON array of versions sorted from latest to oldest.
+
+runs:
+  using: node24
+  main: dist/index.js
