@@ -1,4 +1,4 @@
-name: Find supported Pythons
+name: Find supported Python
 description: Find Python versions that are still supported, i.e., not EOL.
 author: BiocPy
 
