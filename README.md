@@ -1,6 +1,7 @@
 # Find supported Python versions
 
 ![CI](https://github.com/BiocPy/find-supported-python/actions/workflows/ci.yml/badge.svg)
+![Coverage](./badges/coverage.svg)
 
 Finds the currently supported (i.e., non-EOL) versions of Python. 
 This ensures that CI workflows will automatically test Python code on supported versions,
